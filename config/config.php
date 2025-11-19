@@ -15,10 +15,8 @@ return [
         'pass' => $isLocal 
             ? ($_ENV['MYSQL_PASS'] ?? '') 
             : ($_ENV['MYSQL_PASS_PROD'] ?? ''),
-        'charset' => $isLocal
-            ? ($_ENV['MYSQL_CHARSET_LOCAL'] ?? 'utf8mb4')
-            : ($_ENV['MYSQL_CHARSET_PROD'] ?? 'utf8'),
-        ],
+        'charset' => 'utf8mb4',
+    ],
     'app' => [
         'base_url' => $isLocal ? ($_ENV['BASE_URL_LOCAL'] ?? '') : ($_ENV['BASE_URL_PROD'] ?? ''),
     ],
