@@ -1,8 +1,15 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->safeLoad();
+
 $config = require __DIR__ . '/../config/config.php';
 $db = $config['mysql'];
 
-$dsn = "mysql:host={$db['host']};dbname={$db['database']};charset={$db['charset']}";
+$dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset={$db['charset']}";
+
 global $isConnected;
 $isConnected = false;
 try {

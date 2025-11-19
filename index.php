@@ -1,9 +1,9 @@
 <?php
-    $config = require __DIR__ . '/scripts/test_mysql.php';
+    $config = require __DIR__ . '/scripts/connection.php';
+
     if(isset($isConnected) && $isConnected) {
         require __DIR__ . '/templates/home.php';
-        
     } else {
-        echo "Kết nối MySQL thất bại từ index.php\n";
+        echo "<br/>Kết nối MySQL thất bại từ index.php\n";
     }
 ?>
