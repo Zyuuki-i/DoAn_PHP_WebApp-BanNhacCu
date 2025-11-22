@@ -11,7 +11,7 @@ use App\Controller\HomeController;
 
 $router = new Router();
 
-$router->add('GET', '/index', function () {
+$router->add('GET', '/index.php', function () {
     header("Location: /home");
     exit;
 });
