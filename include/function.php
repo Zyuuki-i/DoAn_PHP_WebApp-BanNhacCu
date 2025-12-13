@@ -1,9 +1,4 @@
 <?php
-function loadClass($c)
-{
-	include ROOT."/classes/".$c.".class.php";
-}
-
 function getIndex($index, $value='')
 {
 	$data = isset($_GET[$index])? $_GET[$index]:$value;

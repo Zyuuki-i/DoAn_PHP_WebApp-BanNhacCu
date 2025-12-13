@@ -12,7 +12,7 @@ if (!defined('APP_RUNNING')) {
     <title>Shop Nhạc Cụ - Mua Bán Nhạc Cụ Chính Hãng</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh;">
 <header>
@@ -28,19 +28,16 @@ if (!defined('APP_RUNNING')) {
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
                     <ul class="navbar-nav flex-grow-1 d-flex justify-content-evenly me-5">
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark fs-5" >Trang chủ</a>
+                            <a href="/" class="nav-link text-dark fs-5" >Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark fs-5" >Giới thiệu</a>
+                            <a href="/GioiThieu" class="nav-link text-dark fs-5" >Giới thiệu</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark fs-5">Sản phẩm</a>
+                            <a href="/SanPham" class="nav-link text-dark fs-5">Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark fs-5">Liên hệ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link text-dark fs-5">Đánh giá</a>
+                            <a href="/DanhGia" class="nav-link text-dark fs-5">Đánh giá</a>
                         </li>
                     </ul>
                 </div>
@@ -53,13 +50,13 @@ if (!defined('APP_RUNNING')) {
                     </div>
                 </div>
                 <div class="border border-secondary rounded-2">
-                    <form class="d-flex" method="post">
+                    <form action="/SanPham/TimKiem" class="d-flex" method="get">
                         <input class="form-control border-0 " type="search" name="keyword" placeholder="Tìm kiếm sản phẩm..">
                         <button type="submit" class="btn rounded-2"><i class="bi bi-search"></i></button>
                     </form>
                 </div>
                 <div class="position-relative">
-                    <form method="post">
+                    <form action="/DonDatHang/GioHang" method="post">
                         <button class="btn ms-3 me-3" type="submit">
                             <i class="bi bi-cart fs-4"></i>
                             <i class="bi bi-circle-fill text-danger position-absolute start-50"></i>
@@ -69,9 +66,9 @@ if (!defined('APP_RUNNING')) {
                         </button>
                     </form>
                 </div>
-                <form method="post">
+                <form action="/User/DangNhap" method="post">
                     <button class="btn btn-outline-info d-flex align-items-center" type="submit">
-                        <i class="bi bi-person fs-4"></i><span class="ms-2">Đăng Ký</span>
+                        <i class="bi bi-person fs-4"></i><span class="ms-2">Đăng Nhập</span>
                     </button>
                 </form>
             </div>
@@ -110,10 +107,10 @@ if (!defined('APP_RUNNING')) {
                 <h5>Thực Hiện</h5>
                 <table class="table">
                     <tr>
-                        <td>Lê Văn Đạt - DH52200473 - D22_TH06</td>
+                        <td>Lê Văn Đạt/DH52200473/D22_TH06</td>
                     </tr>
                     <tr>
-                        <td>Lê Công Toại - DH52201583 - D22_TH06</td>
+                        <td>Lê Công Toại/DH52201583/D22_TH06</td>
                     </tr>
                 </table>
             </div>

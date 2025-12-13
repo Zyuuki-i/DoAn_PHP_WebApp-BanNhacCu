@@ -40,7 +40,7 @@ if (!defined('APP_RUNNING')) {
             <div class="card h-100">
                 <div class="col h-100">
                     <div class="card">
-                        <a href="chiTietSP.php?id=<?php echo $item->ma_sp; ?>">
+                        <a href="/SanPham/ChiTiet?id=<?php echo $item->ma_sp; ?>">
                             <div class="d-flex align-content-center p-1" style="height: 400px">
                                 <img src="<?php echo $url; ?>" class="card-img-top" alt="Hình Sản Phẩm" style="object-fit:contain;">
                             </div>
@@ -79,7 +79,7 @@ if (!defined('APP_RUNNING')) {
     <?php endforeach; ?>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-        <a href="" asp-action="Index" class="fs-4 text-decoration-none text-primary">Xem thêm</a>
+        <a href="<?=$baseUrl[0]?>/SanPham" class="fs-4 text-decoration-none text-primary">Xem thêm</a>
     </div>
 </div>
 <script>

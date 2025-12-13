@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Model\Product;
 use App\Model\Hinh;
+use App\Model\DanhGia;
+use App\Model\NguoiDung;
 
 class HomeController
 {
@@ -16,9 +18,35 @@ class HomeController
             $products = array_slice($products, 0, 6);
         }
 
-        $content = $this->render('home.php', ['products' => $products, 'hinhList' => $hinhList]);
+        $content = $this->view('index.php', ['products' => $products, 'hinhList' => $hinhList]);
 
-        return $this->render('layout.php', ['content' => $content]);
+        return $this->render('main_layout.php', ['content' => $content]);
+    }
+
+    public function gioiThieu()
+    {
+        $content = $this->view('gioithieu.php');
+
+        return $this->render('main_layout.php', ['content' => $content]);
+    }
+
+    public function danhGia()
+    {
+        $pdo = require __DIR__ . '/../../config/config.php';
+        $nguoidungs = NguoiDung::getAll($pdo);
+        $danhgias = DanhGia::getAll($pdo);
+
+        $content = $this->view('danhgia.php', ['danhgias' => $danhgias, 'nguoidungs' => $nguoidungs]);
+
+        return $this->render('main_layout.php', ['content' => $content]);
+    }
+
+    private function view($view, $data = [])
+    {
+        extract($data);
+        ob_start();
+        include __DIR__ . '/../View/Home/' . $view;
+        return ob_get_clean();
     }
 
     private function render($template, $data = [])

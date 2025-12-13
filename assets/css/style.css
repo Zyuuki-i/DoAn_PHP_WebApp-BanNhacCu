@@ -1,1 +1,8 @@
+.li-hover:hover {
+    font-size: large;
+    transform: translateX(10px);
+}
 
+.ho-item:hover {
+    transform: translateY(-10px);
+}
