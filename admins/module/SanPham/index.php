@@ -17,7 +17,7 @@
     $sp = Product::getAll($pdo);
 
     $trang = isset($_GET['trang']) ? (int)$_GET['trang'] : 1;
-    $sosp = 6; 
+    $sosp = 5; 
     if ($trang < 1) $trang = 1;
 
     $vitribd = ($trang - 1) * $sosp;
@@ -74,13 +74,13 @@
         <?php if ($tongtrang > 1): ?>
         <nav aria-label="Page navigation" class="my-4">
             <ul class="pagination justify-content-center pagination-sm"> <li class="page-item <?= ($trang <= 1) ? 'disabled' : '' ?>">
-                    <a class="page-link" href="index.php?mod=SanPham&trang=<?= $trang - 1 ?>" aria-label="Previous">
+                    <a class="page-link" href="index.php?mod=SanPham&trang=<?= 1 ?>" aria-label="Previous">
                         <span aria-hidden="true"><i class="fas fa-chevron-left"></i> &laquo;</span>
                     </a>
                 </li>
 
                 <?php for ($i = 1; $i <= $tongtrang; $i++): ?>
-                    <?php if ($i == 1 || $i == $tongtrang || ($i >= $trang - 2 && $i <= $trang + 2)): ?>
+                    <?php if ($i >= $trang - 2 && $i <= $trang + 2): ?>
                         <li class="page-item <?= ($i == $trang) ? 'active' : '' ?>">
                             <a class="page-link" href="index.php?mod=SanPham&trang=<?= $i ?>"><?= $i ?></a>
                         </li>
@@ -90,7 +90,7 @@
                 <?php endfor; ?>
 
                 <li class="page-item <?= ($trang >= $tongtrang) ? 'disabled' : '' ?>">
-                    <a class="page-link" href="index.php?mod=SanPham&trang=<?= $trang + 1 ?>" aria-label="Next">
+                    <a class="page-link" href="index.php?mod=SanPham&trang=<?= $tongtrang ?>" aria-label="Next">
                         <span aria-hidden="true">&raquo; <i class="fas fa-chevron-right"></i></span>
                     </a>
                 </li>
