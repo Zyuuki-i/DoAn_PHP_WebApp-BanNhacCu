@@ -35,6 +35,14 @@ $module_index = __DIR__ . '/module/' . $mod . '/index.php';
     <link rel="stylesheet" href="./resources/css/style.css">
 </head>
 <body>
+    <style>
+        .ul-a{
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+    </style>
     <div class="container" style="height: 100vh;">
         <div class="row justify-content-center h-100">
             <div class="col-3 bg-admin text-white p-4 my-1 shadow rounded-3">
