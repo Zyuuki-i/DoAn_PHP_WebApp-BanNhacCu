@@ -48,34 +48,34 @@ $module_index = __DIR__ . '/module/' . $mod . '/index.php';
                            <?php 
                             if ($admin['ma_vt'] === 'Admin') {?>
                                 <li class="nav-item mb-2">
-                                    <a class="nav-link text-white" href="index.php?mod=thongke"><i class="bi bi-speedometer2 me-2"></i>Thống kê doanh thu</a>
+                                    <a class="nav-link text-white" href="index.php?mod=ThongKe"><i class="bi bi-speedometer2 me-2"></i>Thống kê doanh thu</a>
                                 </li>
                             <?php } ?>
                             <li class="nav-item mb-2">
-                                  <a class="nav-link text-white" href="index.php?mod=sanpham"><i class="bi bi-box-seam me-2"></i>Quản lý sản phẩm</a>
+                                  <a class="nav-link text-white" href="index.php?mod=SanPham"><i class="bi bi-box-seam me-2"></i>Quản lý sản phẩm</a>
                             </li>
                             <li class="nav-item mb-2">
-                                  <a class="nav-link text-white" href="index.php?mod=loaisanpham"><i class="bi bi-file-earmark-text me-2"></i>Quản lý loại sản phẩm</a>
+                                  <a class="nav-link text-white" href="index.php?mod=LoaiSanPham"><i class="bi bi-file-earmark-text me-2"></i>Quản lý loại sản phẩm</a>
                             </li>
                             <li class="nav-item mb-2">
-                                  <a class="nav-link text-white" href="index.php?mod=nhasanxuat"><i class="bi bi-file-earmark-text me-2"></i>Quản lý nhà sản xuất</a>
+                                  <a class="nav-link text-white" href="index.php?mod=NhaSanXuat"><i class="bi bi-file-earmark-text me-2"></i>Quản lý nhà sản xuất</a>
                             </li>
                             <li class="nav-item mb-2">
-                                <a class="nav-link nav-top-item text-white" href="index.php?mod=dondathang"><i class="bi bi-file-earmark-text me-2"></i>Quản lý đơn đặt hàng</a>
+                                <a class="nav-link nav-top-item text-white" href="index.php?mod=DonDatHang"><i class="bi bi-file-earmark-text me-2"></i>Quản lý đơn đặt hàng</a>
                                 <ul class="ul-items">
-                                    <li class="nav-link"><a href="index.php?mod=dondathang&type=dangxuly"><i class="bi bi-arrow-bar-right"></i> Đơn hàng đang xử lý</a></li>
-                                    <li class="nav-link"><a href="index.php?mod=dondathang&type=daxuly"><i class="bi bi-arrow-bar-right"></i> Đơn hàng đã xử lý</a></li>
-                                    <li class="nav-link"><a href="index.php?mod=dondathang&type=hoanthanh"><i class="bi bi-arrow-bar-right"></i> Đơn hàng hoàn thành</a></li>
-                                    <li class="nav-link"><a href="index.php?mod=dondathang&type=huy"><i class="bi bi-arrow-bar-right"></i> Đơn hàng đã hủy</a></li>
+                                    <li class="nav-link"><a class="ul-a" href="index.php?mod=DonDatHang&type=dangxuly"><i class="bi bi-arrow-bar-right"></i> Đơn hàng đang xử lý</a></li>
+                                    <li class="nav-link"><a class="ul-a" href="index.php?mod=DonDatHang&type=daxuly"><i class="bi bi-arrow-bar-right"></i> Đơn hàng đã xử lý</a></li>
+                                    <li class="nav-link"><a class="ul-a" href="index.php?mod=DonDatHang&type=hoanthanh"><i class="bi bi-arrow-bar-right"></i> Đơn hàng hoàn thành</a></li>
+                                    <li class="nav-link"><a class="ul-a" href="index.php?mod=DonDatHang&type=huy"><i class="bi bi-arrow-bar-right"></i> Đơn hàng đã hủy</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item mb-2">
                                 <a class="nav-link nav-top-item text-white" href="#"><i class="bi bi-people me-2"></i>Quản lý người dùng</a>
                                 <ul class="ul-items">
                                     <?php  if ($admin['ma_vt'] === 'Admin') {?>
-                                        <li class="nav-link"><a href="index.php?mod=nhanvien"><i class="bi bi-arrow-bar-right"></i> Nhân viên</a></li>
+                                        <li class="nav-link"><a class="ul-a" href="index.php?mod=NhanVien"><i class="bi bi-arrow-bar-right"></i> Nhân viên</a></li>
                                     <?php } ?>
-                                    <li class="nav-link"><a href="index.php?mod=khachhang"><i class="bi bi-arrow-bar-right"></i> Khách hàng</a></li>
+                                    <li class="nav-link"><a class="ul-a" href="index.php?mod=KhachHang"><i class="bi bi-arrow-bar-right"></i> Khách hàng</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item mt-4">

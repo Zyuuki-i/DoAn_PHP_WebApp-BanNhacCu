@@ -21,7 +21,7 @@ body{
     list-style-type: none;
     padding-left: 20px;
 }
-.ul-items li a{
+.ul-a{
     color: #fff;
     text-decoration: none;
     display: block;
